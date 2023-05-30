@@ -12,9 +12,7 @@ type PropsType = {
   children: React.ReactNode
 }
 
-export default function RootLayout({
-  children,
-}: PropsType) {
+export default function RootLayout({children}: PropsType) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>

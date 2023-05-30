@@ -1,5 +1,11 @@
+'use client'
+
+import { useState } from "react"
+
 export default function Quiz() {
     return (
-        <h1>Quiz Page</h1>
+        <div className="quiz-container ">
+            
+        </div>
     )
 }
