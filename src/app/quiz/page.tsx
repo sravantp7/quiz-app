@@ -5,8 +5,9 @@ import { quiz } from "../data"
 
 export default function Quiz() {
     // Keep track of current displaying question (index)
-    const [activeQuestion, setActiveQuestion] = useState<number>(0);
+    const [activeQuestion, setActiveQuestion] = useState<number>(0)
     const [selectedAnswer, setSelectedAnswer] = useState<boolean>(false)
+    // Used to determine whether user can navigate to next question or not
     const [checked, setChecked] = useState<boolean>(false)
     const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<null | number>(null)
     const [showResult, setShowResult] = useState(false)
@@ -32,6 +33,23 @@ export default function Quiz() {
         }
     }
 
+    // Calculate score and go to next question
+    const nextQuestion = () => {
+        setSelectedAnswerIndex(null);
+        setResult((prev) => (
+            selectedAnswer ? {...prev, score: prev.score + 5, correctAnswers: prev.correctAnswers + 1} : {...prev, wrongAnswers: prev.wrongAnswers + 1}
+        ))
+
+        if (activeQuestion != totalQuestions - 1) {
+            setActiveQuestion((prev) => prev + 1);
+        } else {
+            setActiveQuestion(0);
+            setShowResult(true);
+        }
+
+        setChecked(false);
+    }
+
     return (
         <div className="container">
             <h1>Quiz Page</h1>
@@ -54,6 +72,19 @@ export default function Quiz() {
                                         <span>{answer}</span>
                                     </li>
                                 ))
+                            }
+                            {
+                                checked ? (<button className="btn"
+                                onClick={nextQuestion}
+                                >
+                                    {
+                                        activeQuestion == totalQuestions - 1 ? 'Finish' : 'Next Question'
+                                    }
+                                </button>) : (
+                                    <button disabled className="btn-disabled">
+                                        Next Question
+                                    </button>
+                                )
                             }
                         </div>
                     ) : (<div className="quiz-container">ho</div>)
