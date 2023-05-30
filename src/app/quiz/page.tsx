@@ -46,7 +46,6 @@ export default function Quiz() {
             setActiveQuestion(0);
             setShowResult(true);
         }
-
         setChecked(false);
     }
 
@@ -87,7 +86,16 @@ export default function Quiz() {
                                 )
                             }
                         </div>
-                    ) : (<div className="quiz-container">ho</div>)
+                    ) : (<div className="quiz-container center">
+                        <h3>Result</h3>
+                        <hr />
+                        <h3>Overall - {(result.score / 25) * 100}%</h3>
+                        <p>Total Questions : <span>{totalQuestions}</span></p>
+                        <p>Total Score : <span>{result.score}</span></p>
+                        <p>Correct Answers : <span>{result.correctAnswers}</span></p>
+                        <p>Wrong Answers : <span>{result.wrongAnswers}</span></p>
+                        <button onClick={() => window.location.reload()}>Reset</button>
+                    </div>)
                 }
             </div>
         </div>

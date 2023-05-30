@@ -72,6 +72,18 @@ li {
   border-radius: 4px;
 }
 
+.quiz-container.center {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+hr {
+  margin: 10px 0;
+}
+
 .container p {
   padding: 8px 0;
 }
