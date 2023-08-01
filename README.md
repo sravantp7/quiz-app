@@ -31,4 +31,4 @@ Main Page
 [![quiz1.png](https://i.postimg.cc/63xWbGPd/quiz1.png)](https://postimg.cc/67zxyTt3)
 
 Quiz Page
-[![quiz2.png](https://i.postimg.cc/LX5T7nZ8/quiz2.png)](https://postimg.cc/PpGYvf4g)
+[![quiz2.png](https://i.postimg.cc/LX5T7nZ8/quiz2.png)]
