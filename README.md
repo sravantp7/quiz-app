@@ -28,7 +28,7 @@ Open http://localhost:3000 with your browser to see the result.
 ## Screenshots
 
 Main Page
-[![quiz1.png](https://i.postimg.cc/63xWbGPd/quiz1.png)]
+![quiz1.png](https://i.postimg.cc/63xWbGPd/quiz1.png)
 
 Quiz Page
-[![quiz2.png](https://i.postimg.cc/LX5T7nZ8/quiz2.png)]
+![quiz2.png](https://i.postimg.cc/LX5T7nZ8/quiz2.png)
